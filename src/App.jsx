@@ -1,5 +1,5 @@
 import styled, { ThemeProvider } from "styled-components";
-import { AuthContextProvider, MyRoutes, Light, Dark } from "./index";
+import { AuthContextProvider, MyRoutes, Light, Dark, Sidebar } from "./index";
 import { createContext, useState } from "react";
 import { Device } from "./styles/breackpoints";
 export const ThemeContext = createContext(null);
@@ -16,7 +16,12 @@ function App() {
         <ThemeProvider theme={themeStyle}>
           <AuthContextProvider>
             <Container className={sidebarOpen ? "active" : ""}>
-              <section className="ContentSidebar">sidebar</section>
+              <section className="ContentSidebar">
+                <Sidebar
+                  state={sidebarOpen}
+                  setState={() => setSidebarOpen(!sidebarOpen)}
+                ></Sidebar>
+              </section>
               <section className="ContentMenuambur">menuambor</section>
               <section className="ContentRoutes">
                 <MyRoutes></MyRoutes>
@@ -58,7 +63,6 @@ const Container = styled.div`
     @media ${Device.tablet} {
       grid-column: 2;
     }
-      
   }
 `;
 
