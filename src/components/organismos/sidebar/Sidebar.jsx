@@ -99,7 +99,6 @@ const Container = styled.div`
       align-items: center;
       width: 30px;
       cursor: pointer;
-      
       img {
         width: 100%;
       }

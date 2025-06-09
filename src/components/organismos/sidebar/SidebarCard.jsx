@@ -10,7 +10,7 @@ export function SidebarCard() {
         <div className="circle2"></div>
         <h3>Cerrar sesión</h3>
         <div className="contentBtn">
-          <Btnsave titulo="Cerrar ..." bgcolor="#f8f2fd"  />
+          <Btnsave titulo="Cerrar" bgcolor="#f8f2fd"  />
         </div>
       </div>
     </Container>
@@ -35,14 +35,14 @@ const Container = styled.div`
   .cardContent {
     position: relative;
     padding: 1rem;
-    background: ${(props) => props.theme.bg5};
+    
     border-radius: 10px;
     overflow: hidden;
 
     .circle1,
     .circle2 {
       position: absolute;
-      background: ${(props) => props.theme.whiteBg};
+      background: ${(props) => props.theme.bg5};
       border-radius: 50%;
       opacity: 0.7;
     }
@@ -62,8 +62,8 @@ const Container = styled.div`
       font-size: 1.1rem;
       margin-top: 1rem;
       padding: 1rem 0;
-      font-weight: 800;
-      color: #000;
+      font-weight: 500;
+      
     }
     .contentBtn {
       position:relative;
