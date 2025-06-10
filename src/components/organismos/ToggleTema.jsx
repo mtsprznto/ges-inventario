@@ -8,9 +8,9 @@ export function ToggleTema() {
   };
   return (
     <Container>
-      <label class="switch">
+      <label className="switch">
         <input type="checkbox" onChange={CambiarTheme} />
-        <span class="slider"></span>
+        <span className="slider"></span>
       </label>
     </Container>
   );
