@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { InsertarUsuarios } from "../index";
+import { InsertarUsuarios, supabase } from "../index";
 
 /*
 Session para crear usuario para el sistema
@@ -15,10 +15,11 @@ export const useUsuariosStore = create((set, get) => ({
     console.log("DATA DEL USER: ",data);
 
     if (error) return null;
-    await InsertarUsuarios({
+    const dataUser = await InsertarUsuarios({
       idauth: data.user.id,
       fecharegistro: new Date(),
       tipouser: "admin"
     });
+    return dataUser;
   },
 }));
