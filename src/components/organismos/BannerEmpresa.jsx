@@ -1,21 +1,29 @@
 import styled from "styled-components";
+// eslint-disable-next-line no-unused-vars
 import { v } from "../../styles/variables";
 import { CardDatosEmpresa } from "../moleculas/CardDatosEmpresa";
+import { useEmpresaStore } from "../../index";
 
 export function BannerEmpresa() {
+  const { dataEmpresa } = useEmpresaStore();
+
+  console.log(dataEmpresa);
   return (
     <Container>
       <div className="content-wrapper-context">
         <span className="titulo">
           {<v.iconoempresa />}
-          Nombre empresa
+          {dataEmpresa.empresa?.nombre}
         </span>
         <div className="content-text">GestInventario te mantiene informado</div>
         <ContentCards>
-          <CardDatosEmpresa titulo={"Moneda"} valor={"$"}></CardDatosEmpresa>
+          <CardDatosEmpresa
+            titulo={"Moneda"}
+            valor={dataEmpresa.empresa?.simbolomoneda}
+          ></CardDatosEmpresa>
           <CardDatosEmpresa
             titulo={"Usuarios"}
-            valor={"100"}
+            valor={"200"}
           ></CardDatosEmpresa>
         </ContentCards>
       </div>

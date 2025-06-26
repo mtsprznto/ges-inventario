@@ -16,6 +16,7 @@ export * from './hooks/ProtectedRoute'
 
 export * from './store/UsuariosStore'
 export * from './store/AuthStore'
+export * from './store/EmpresaStore'
 
 export * from './pages/Home';
 export * from './pages/Login';
@@ -47,6 +48,9 @@ export * from './components/atomos/Title'
 export * from './components/moleculas/Btnsave'
 export * from './components/moleculas/BtnCircular'
 export * from './components/moleculas/CardDatosEmpresa'
+export * from './components/moleculas/SpinnerLoader'
+export * from './components/moleculas/ErrorMolecula'
 
 export * from './supabase/supabase.config';
 export * from './supabase/crudUsuarios'
+export * from './supabase/crudEmpresa'
