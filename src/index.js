@@ -27,6 +27,7 @@ export * from './styles/breackpoints';
 
 export * from './components/templates/HomeTemplate'
 export * from './components/templates/LoginTemplate'
+export * from './components/templates/ConfiguracionTemplate'
 
 export * from './components/organismos/sidebar/Sidebar'
 export * from './components/organismos/sidebar/SidebarCard'

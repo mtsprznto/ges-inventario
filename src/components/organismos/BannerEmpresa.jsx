@@ -5,7 +5,7 @@ import { CardDatosEmpresa } from "../moleculas/CardDatosEmpresa";
 import { useEmpresaStore } from "../../index";
 
 export function BannerEmpresa() {
-  const { dataEmpresa } = useEmpresaStore();
+  const { dataEmpresa, contadorusuarios } = useEmpresaStore();
 
   console.log(dataEmpresa);
   return (
@@ -23,7 +23,7 @@ export function BannerEmpresa() {
           ></CardDatosEmpresa>
           <CardDatosEmpresa
             titulo={"Usuarios"}
-            valor={"200"}
+            valor={contadorusuarios}
           ></CardDatosEmpresa>
         </ContentCards>
       </div>

@@ -8,13 +8,13 @@ export const MostrarEmpresa = async (p) => {
     .eq("id_usuario", p.idusuario)
     .maybeSingle();
 
-  if (error) {
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Ha ocurrido un error al mostrar empresa" + error.message,
-    });
-  }
+  // if (error) {
+  //   Swal.fire({
+  //     icon: "error",
+  //     title: "Oops...",
+  //     text: "Ha ocurrido un error al mostrar empresa" + error.message,
+  //   });
+  // }
   if (data) {
     return data;
   }
@@ -25,13 +25,13 @@ export const ContarUsuarioXEmpresa = async (p) => {
   const { error, data } = await supabase.rpc("contar_usuarios_por_empresa", {
     _id_empresa: p.id_empresa,
   });
-  if (error) {
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Ha ocurrido un error al contar usuarios por empresa" + error.message,
-    });
-  }
+  // if (error) {
+  //   Swal.fire({
+  //     icon: "error",
+  //     title: "Oops...",
+  //     text: "Ha ocurrido un error al contar usuarios por empresa" + error.message,
+  //   });
+  // }
   if (data) {
     return data;
   }

@@ -41,7 +41,7 @@ const Container = styled.div`
     grid-area: area1;
     display: flex;
     align-items: center;
-    justify-content:end;
+    justify-content: end;
   }
   .main {
     grid-area: main;

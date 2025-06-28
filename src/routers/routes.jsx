@@ -9,6 +9,7 @@ import {
   useUsuariosStore,
   useEmpresaStore,
 } from "../index";
+import { ConfiguracionPage } from "../pages/Configuracion";
 import { useQuery } from "@tanstack/react-query";
 
 export function MyRoutes() {
@@ -45,6 +46,7 @@ export function MyRoutes() {
         }
       >
         <Route path="/" element={<Home />}></Route>
+        <Route path="/configurar" element={<ConfiguracionPage />}></Route>
       </Route>
     </Routes>
   );
